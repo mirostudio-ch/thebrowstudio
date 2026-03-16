@@ -783,7 +783,18 @@ ul { list-style: none; }
    ============================================ */
 .testimonials {
   background: var(--color-bg-alt);
-  overflow: hidden;
+  /* overflow: hidden removed — it was blocking horizontal scroll */
+}
+
+/* Wrapper holds slider + nav arrows side by side */
+.testimonials-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 0 8px;
 }
 
 .testimonials-slider {
@@ -792,18 +803,76 @@ ul { list-style: none; }
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 20px 24px 40px;
-  margin: 0 -24px;
+  padding: 20px 0 40px;
+  flex: 1;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .testimonials-slider::-webkit-scrollbar {
   display: none;
 }
 
+.testimonials-slider::before,
 .testimonials-slider::after {
   content: '';
-  flex: 0 0 1px;
+  flex: 0 0 24px;
+}
+
+/* Nav arrow buttons */
+.testimonials-nav {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary);
+  background: var(--color-white);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 2;
+  box-shadow: var(--shadow-card);
+}
+
+.testimonials-nav:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+.testimonials-nav:disabled {
+  opacity: 0.3;
+  cursor: default;
+  transform: none;
+}
+
+/* Dots */
+.testimonials-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: -16px;
+  padding-bottom: 8px;
+}
+
+.testimonials-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-light);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  padding: 0;
+}
+
+.testimonials-dot.active {
+  background: var(--color-primary);
+  width: 24px;
+  border-radius: 4px;
 }
 
 .testimonial-card {
