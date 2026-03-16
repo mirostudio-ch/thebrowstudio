@@ -792,12 +792,18 @@ ul { list-style: none; }
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 20px 0 40px;
+  padding: 20px 24px 40px;
+  margin: 0 -24px;
   scrollbar-width: none;
 }
 
 .testimonials-slider::-webkit-scrollbar {
   display: none;
+}
+
+.testimonials-slider::after {
+  content: '';
+  flex: 0 0 1px;
 }
 
 .testimonial-card {
@@ -879,6 +885,12 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+}
+
+.team-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .team-card {
@@ -1327,7 +1339,7 @@ ul { list-style: none; }
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .team-grid {
+  .team-grid, .team-grid--two {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1401,7 +1413,7 @@ ul { list-style: none; }
     flex: 0 0 300px;
   }
 
-  .team-grid {
+  .team-grid, .team-grid--two {
     grid-template-columns: 1fr;
   }
 
