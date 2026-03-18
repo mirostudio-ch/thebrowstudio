@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Michroma&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
@@ -25,9 +25,9 @@
   <header class="header" id="header">
     <div class="container">
       <a href="#" class="logo">
-        <div>
+        <div class="logo-wordmark">
           <span class="logo-text">THE BROW</span>
-          <span class="logo-sub">Studio</span>
+          <span class="logo-sub">STUDIO</span>
         </div>
       </a>
 
@@ -39,15 +39,14 @@
           <li><a href="#team">Team</a></li>
           <li><a href="#training">Schulungen</a></li>
           <li><a href="#contact">Kontakt</a></li>
-          <li style="display: flex; align-items: center;">
-            <a href="#shop" aria-label="Online Shop" title="Online Shop demnächst verfügbar" style="display: flex; align-items: center;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-              </svg>
-            </a>
-          </li>
+          <li><a href="#shop" class="nav-shop-text">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            Shop
+          </a></li>
           <li><a href="#book" class="nav-cta">Termin buchen</a></li>
         </ul>
       </nav>
@@ -220,6 +219,125 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ============================================
+       10. SHOP SECTION (Moved Base on Request)
+       ============================================ -->
+  <section class="section shop" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Online Shop</span>
+        <h2 class="section-title">Unsere Produkte</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Hochwertige Pflege- und Beautyprodukte für zu Hause — speziell ausgewählt von The Brow Studio.</p>
+      </div>
+
+      <div class="shop-grid stagger-children">
+
+        <!-- Product 1 -->
+        <div class="product-card reveal">
+          <span class="product-card-badge badge-new">Neu</span>
+          <div class="product-image">
+            <img src="images/about.png" alt="Aftercare Regeneration Serum" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Aftercare</div>
+            <div class="product-name">Regeneration Serum</div>
+            <p class="product-desc">Beruhigendes Heilserum für die Nachbehandlungspflege. Fördert die Regeneration der Haut nach PMU-Behandlungen.</p>
+            <div class="product-rating">
+              <span class="product-stars">★★★★★</span>
+              <span class="product-rating-count">(42)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">CHF 38</div>
+              <button class="btn-add-cart">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Kaufen
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card reveal">
+          <span class="product-card-badge">Bestseller</span>
+          <div class="product-image">
+            <img src="images/before-after.png" alt="Brow Definition Pencil" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Make-up</div>
+            <div class="product-name">Brow Definition Pencil</div>
+            <p class="product-desc">Präzisions-Brauenstift für natürlich definierte Augenbrauen. Wasserfest, langanhaltend, in 5 Farbtönen.</p>
+            <div class="product-rating">
+              <span class="product-stars">★★★★★</span>
+              <span class="product-rating-count">(87)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="old-price">CHF 28</span>CHF 22
+              </div>
+              <button class="btn-add-cart">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Kaufen
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card reveal">
+          <div class="product-image">
+            <img src="images/salon.png" alt="Aftercare Complete Kit" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Pflegeset</div>
+            <div class="product-name">Aftercare Complete Kit</div>
+            <p class="product-desc">Komplettes Nachsorgeset für PMU-Behandlungen: Serum, Creme & Reinigungsschaum in einer edlen Box.</p>
+            <div class="product-rating">
+              <span class="product-stars">★★★★☆</span>
+              <span class="product-rating-count">(31)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">CHF 69</div>
+              <button class="btn-add-cart">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Kaufen
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card reveal">
+          <span class="product-card-badge badge-new">Limitiert</span>
+          <div class="product-image">
+            <img src="images/hero.png" alt="Professional Brow Tool Set" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-category">Werkzeug</div>
+            <div class="product-name">Professional Brow Tool Set</div>
+            <p class="product-desc">Professionelles Brauenpflege-Set: Pinzette, Brauenbürste & Mascara-Applikator in einem eleganten Etui.</p>
+            <div class="product-rating">
+              <span class="product-stars">★★★★★</span>
+              <span class="product-rating-count">(19)</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">CHF 45</div>
+              <button class="btn-add-cart">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Kaufen
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="shop-cta">
+        <a href="mailto:info@thebrowstudio.ch" class="btn btn-dark">Alle Produkte anfragen</a>
+      </div>
     </div>
   </section>
 
@@ -544,7 +662,7 @@
   </section>
 
   <!-- ============================================
-       10. FAQ SECTION
+       11. FAQ SECTION
        ============================================ -->
   <section class="section faq" id="faq">
     <div class="container">
